@@ -36,5 +36,75 @@ Azure 구독 (Azure 기반 예제용)
 ```bash
 pip install -r requirements.txt
 ```
+※ 가상환경 사용을 권장합니다 (venv, virtualenv 등)
 
+## 🔐 GitHub 기반 예제 설정 방법
+1. GitHub Personal Access Token 생성
+GitHub → 설정 → Developer settings → Fine-grained tokens 진입
 
+이름 설정, 만료일 30일, 권한은 Public Repositories
+
+생성 후 토큰 복사
+
+## 2. .env 파일 설정
+
+```bash
+cp .env.example .env
+```
+.env 파일 열어서 다음 항목 수정:
+```bash
+GITHUB_TOKEN=복사한_토큰
+```
+
+## ☁️ Azure 기반 예제 설정 방법
+1. 프로젝트 연결 문자열 받기
+Azure AI Foundry에서 프로젝트 생성 후
+Overview 페이지에서 연결 문자열 복사
+
+## 2. .env 파일 설정
+
+```bash
+cp .env.example .env
+```
+.env 파일 열어서 다음 항목 수정:
+```bash
+PROJECT_CONNECTION_STRING=복사한_연결_문자열
+```
+
+## 3. Azure CLI 로그인
+Azure CLI 설치 후:
+```bash
+az login --use-device-code
+```
+
+로그인 후 구독을 선택합니다.
+
+## 🔧 Agentic RAG 예제 추가 설정 (Lesson 5)
+.env 파일에 아래 항목들을 추가해야 합니다:
+
+```bash
+AZURE_SUBSCRIPTION_ID=
+AZURE_AI_PROJECT_NAME=
+AZURE_OPENAI_SERVICE=
+AZURE_OPENAI_RESOURCE_GROUP=
+GLOBAL_LLM_SERVICE=
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME=
+AZURE_OPENAI_CHAT_DEPLOYMENT_NAME=
+AZURE_OPENAI_ENDPOINT=
+AZURE_OPENAI_API_KEY=
+AZURE_SEARCH_SERVICE_ENDPOINT=
+AZURE_SEARCH_API_KEY=
+AZURE_OPENAI_API_VERSION=
+```
+
+모든 값은 Azure Portal에서 프로젝트/리소스의 개요 또는 속성 페이지에서 확인할 수 있습니다.
+
+## 🧠 Keyless 인증 예시 (Azure 전용)
+
+환경 변수 대신 Azure의 기본 인증 시스템을 사용하는 예시:
+
+```bash
+from azure.identity import DefaultAzureCredential
+credential = DefaultAzureCredential()
+OpenAI 또는 Search 리소스에 보다 안전하게 접근할 수 있습니다.
+```
