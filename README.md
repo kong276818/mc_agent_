@@ -1,4 +1,4 @@
-# ms_agent_
+# mc_agent_Summary:00 KR 
 Summary of Microsoft’s Research on AI Agents
 
 # 🧠 Microsoft AI Agents - 초급자 실습 가이드
