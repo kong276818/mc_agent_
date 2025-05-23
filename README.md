@@ -12,6 +12,7 @@ Summary of Microsoft’s Research on AI Agents
 
 1. 공식 GitHub 리포지토리를 포크하거나 클론합니다.
 2. 로컬 환경에서 아래 명령어를 실행합니다:
+![image](https://github.com/user-attachments/assets/d0ce0903-4cf3-4ff7-b678-a71e4c2f9807)
 
 
 git clone https://github.com/YOUR_USERNAME/microsoft-ai-agents-course.git
@@ -45,6 +46,7 @@ GitHub → 설정 → Developer settings → Fine-grained tokens 진입
 이름 설정, 만료일 30일, 권한은 Public Repositories
 
 생성 후 토큰 복사
+![image](https://github.com/user-attachments/assets/737d1621-7360-4dea-a809-da825b5d61bc)
 
 ## 2. .env 파일 설정
 
@@ -55,6 +57,7 @@ cp .env.example .env
 ```bash
 GITHUB_TOKEN=복사한_토큰
 ```
+![image](https://github.com/user-attachments/assets/772545fa-43e1-48dd-bc6e-17ddc4aff53a)
 
 ## ☁️ Azure 기반 예제 설정 방법
 1. 프로젝트 연결 문자열 받기
