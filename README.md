@@ -13,7 +13,7 @@ Summary of Microsoft’s Research on AI Agents
 1. 공식 GitHub 리포지토리를 포크하거나 클론합니다.
 2. 로컬 환경에서 아래 명령어를 실행합니다:
 
-```bash
+
 git clone https://github.com/YOUR_USERNAME/microsoft-ai-agents-course.git
 cd microsoft-ai-agents-course
 ## 🚀 제공 예제 개요
